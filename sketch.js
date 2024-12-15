@@ -1,6 +1,7 @@
 var ship;
 var lasers =[];
 var laserSound;
+var asteroids = [];
 
 function preload() {
   laserSound = loadSound('audio/laser.wav');
@@ -9,6 +10,9 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ship = new Ship();
+  for (let i = 0; i < 5; i++) {
+    asteroids.push(new Asteroid());
+  }
 }
 
 function draw() {
@@ -19,11 +23,11 @@ function draw() {
   for (var i = lasers.length - 1 ; i  >= 0; i--){
     lasers[i].render();
     lasers[i].update();
-    /*if (lasers[i].offScreen()) {
+    if (lasers[i].offScreen()) {
       lasers.splice(i, 1);
-    }*/
+    }
 
-    /*for(var j =asteroids.length - 1; j >= 0; j--){
+    for(var j =asteroids.length - 1; j >= 0; j--){
       if (lasers[i].hits(asteroids[j])){
           var newAsteroids = asteroids[j].breakup();
       asteroids = asteroids.concat(newAsteroids);
@@ -32,9 +36,13 @@ function draw() {
       break;
 
           }
-    }*/
+    }
   }
-
+  for (let i = asteroids.length - 1; i >= 0; i--) {
+      asteroids[i].update();
+      asteroids[i].show();
+      asteroids[i].edges();
+    }
 }
 
 
