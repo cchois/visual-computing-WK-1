@@ -32,7 +32,7 @@ class Asteroid {
       vertex(x, y);
     }
     endShape(CLOSE);
-    pop();
+
   }
 
   edges() {
