@@ -119,7 +119,7 @@ function drawMenu() {
 }
 
 
-/*function drawGameOver() {
+function drawGameOver() {
   fill(255);
   textFont( gameFont); 
   textAlign(CENTER);
@@ -131,7 +131,7 @@ function drawMenu() {
 }
 
 
-function drawScore() {
+/*function drawScore() {
   fill(255);
   textFont( gameFont); /
   textAlign(LEFT);
