@@ -16,9 +16,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ship = new Ship();
-  for (let i = 0; i < 5; i++) {
-    asteroids.push(new Asteroid());
-  }
+
 }
 
 function draw() {
