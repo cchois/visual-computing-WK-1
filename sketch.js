@@ -55,7 +55,7 @@ function draw() {
 
   for (let i = asteroids.length - 1; i >= 0; i--) {
         if (ship.hits(asteroids[i])){
-          //gameState = "GAMEOVER";
+          gameState = "GAMEOVER";
           console.log('opps');
 
         }
@@ -63,7 +63,7 @@ function draw() {
         asteroids[i].show();
         asteroids[i].edges();
     }
-   //drawScore();
+   drawScore();
 }
 
 
@@ -74,7 +74,7 @@ function keyReleased() {
 
 function keyPressed() {
 
-  /*if (gameState === "MENU" && keyCode === ENTER) {
+  if (gameState === "MENU" && keyCode === ENTER) {
     startGame();
   } else if (gameState === "GAMEOVER" && keyCode === ENTER) {
     resetGame();
