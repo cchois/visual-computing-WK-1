@@ -2,7 +2,9 @@ var ship;
 var lasers =[];
 var laserSound;
 var asteroids = [];
-//var  gameFont;
+var  gameFont;
+var score = 0;
+var gameStatus;
 
 function preload() {
   laserSound = loadSound('audio/laser.wav');
