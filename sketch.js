@@ -131,7 +131,7 @@ function drawGameOver() {
 }
 
 
-/*function drawScore() {
+function drawScore() {
   fill(255);
   textFont( gameFont); /
   textAlign(LEFT);
@@ -139,7 +139,7 @@ function drawGameOver() {
   text(`Score: ${score}`, 10, 20);
 }
 
-function startGame() {
+/*function startGame() {
   gameState = "PLAYING";
   score = 0;
 }
