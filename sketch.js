@@ -139,7 +139,7 @@ function drawScore() {
   text(`Score: ${score}`, 10, 20);
 }
 
-/*function startGame() {
+function startGame() {
   gameState = "PLAYING";
   score = 0;
 }
