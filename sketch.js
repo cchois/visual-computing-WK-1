@@ -23,13 +23,13 @@ function setup() {
 
 function draw() {
   background(0);
-   /*if (gameState === "MENU") {
+   if (gameState === "MENU") {
     drawMenu();
   } else if (gameState === "PLAYING") {
     playGame();
   } else if (gameState === "GAMEOVER") {
     drawGameOver();
-  }*/
+  }
   
   ship.show();
   ship.update();
