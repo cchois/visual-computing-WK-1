@@ -2,13 +2,15 @@ var ship;
 var lasers =[];
 var laserSound;
 var asteroids = [];
-//var  gameFont;
+var  gameFont;
+var score = 0;
+var gameState ='MENU';
 
 function preload() {
   laserSound = loadSound('audio/laser.wav');
   hitSound = loadSound('audio/hit.m4a');
   collisionSound = loadSound ('audio/bang_lg.wav');
-  //gameFont = loadFont('PressStart2P-Regular.ttf');
+  gameFont = loadFont('PressStart2P-Regular.ttf');
 }
 
 function setup() {
@@ -99,7 +101,7 @@ function keyPressed() {
 
 
 
-/*function drawMenu() {
+function drawMenu() {
   
   background(0);
   for (let i = asteroids.length - 1; i >= 0; i--) {
@@ -117,7 +119,7 @@ function keyPressed() {
 }
 
 
-function drawGameOver() {
+/*function drawGameOver() {
   fill(255);
   textFont( gameFont); 
   textAlign(CENTER);
